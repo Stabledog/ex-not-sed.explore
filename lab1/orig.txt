@@ -1,0 +1,23 @@
+define host{
+        use                     generic-host            ; Name of host template to use
+        host_name               ServerA_172.29.16.102
+        alias                   ServerA_172.29.16.102
+        address                 172.29.16.102
+        check_command           check-host-alive
+        max_check_attempts      3
+        notification_interval   120
+        notification_period     24x7
+        }
+
+
+
+define host{
+        use                     generic-host            ; Name of host template to use
+        host_name               ServerB_172.29.16.103
+        alias                   ServerB_172.29.16.103
+        address                 172.29.16.103
+        check_command           check-host-alive
+        max_check_attempts      3
+        notification_interval   120
+        notification_period     24x7
+        }
